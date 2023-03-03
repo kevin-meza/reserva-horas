@@ -32,5 +32,3 @@ Route::resource('/especialista', App\Http\Controllers\EspecialistaController::cl
 Route::resource('/horas_disponibles', App\Http\Controllers\HorasDisponiblesController::class);
 // Route::get('/especialista', [EspecialidadesController::class, 'index']);
 
-Route::post('/horas_disponibles/buscar', [App\Http\Controllers\HorasDisponiblesController::class,'buscar'])->name('horas_disponibles.buscar');
-
