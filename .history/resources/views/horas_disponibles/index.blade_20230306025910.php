@@ -33,13 +33,18 @@ horas disponibles
 </table>
 </form>
 
-<form action="{{ url ('/horas_disponibles/buscarxDia') }}" method="POST" class="d-inline">
+<form action="{{ url ('/horas_disponibles/buscar') }}" method="POST" class="d-inline">
     @csrf
     {{-- {{method_field("POST")}} --}}
 <table>
 <tr>
-   <td>
-     <input type="date" name="fecha" id="fecha">
+   <td> <select name="id_especialista" id="especialista">
+@foreach ($listaEspecialistas as $especialista)
+
+        <option value="{{$especialista->id_especialista}}">{{$especialista->nombre." ".$especialista->apellido }} </option>
+
+@endforeach
+
     </select>
 </td>
 </tr>

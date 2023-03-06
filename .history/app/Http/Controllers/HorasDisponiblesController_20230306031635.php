@@ -75,27 +75,12 @@ class HorasDisponiblesController extends Controller
     }
     public function buscarxDia(Request $request){
         $fecha = request()->except('_token');
-    //    $listaHorasxDia['listaHorasxDia'] = horas_disponibles::whereDate('fecha',$fecha)->where('id_estado', 1)
-    //    ->get();
-
-    $listaHorasxDia['listaHorasxDia'] = horas_disponibles::join('especialistas', 'horas_disponibles.id_especialista', '=', 'especialistas.id_especialista')
-    ->whereDate('fecha',$fecha)->where('id_estado', 1)
-       ->select('horas_disponibles.*', 'especialistas.nombre')
+       $listaHorasxDia['listaHorasxDia'] = horas_disponibles::whereDate('fecha',$fecha)->where('id_estado', 1)
        ->get();
-        // print_r($listaHorasxDia);
+        // print_r($id_especialista);
 
   return view('horas_disponibles/horas_dia',$listaHorasxDia);
 
 
     }
-
-    public function asignarHoras(){
-        return view('asignar_horas/asignar_horas');
-    }
-
-    public function ingresarHoras(Request $request){
-       echo "hola";
-    }
-
-
 }

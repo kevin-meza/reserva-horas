@@ -93,7 +93,7 @@ class HorasDisponiblesController extends Controller
         return view('asignar_horas/asignar_horas');
     }
 
-    public function ingresarHoras(Request $request){
+    public function ingresarHoras(){
        echo "hola";
     }
 

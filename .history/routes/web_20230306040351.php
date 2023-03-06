@@ -35,5 +35,5 @@ Route::resource('/horas_disponibles', App\Http\Controllers\HorasDisponiblesContr
 Route::post('/horas_disponibles/buscar', [App\Http\Controllers\HorasDisponiblesController::class,'buscar'])->name('horas_disponibles.buscar');
 Route::post('/horas_disponibles/buscarxDia', [App\Http\Controllers\HorasDisponiblesController::class,'buscarxDia'])->name('horas_disponibles.buscarxDia');
 
-Route::resource('/asignar_horas', App\Http\Controllers\AsignarHorasController::class);
- Route::post('/asignar_horas/ingresarHoras', [App\Http\Controllers\AsignarHorasController::class,'ingresarHoras'])->name('asignar_horas.ingresarHoras');
+Route::get('/asignar_horas', [App\Http\Controllers\HorasDisponiblesController::class,'asignarHoras']);
+Route::post('/asignar_horas/ingresarHoras', [App\Http\Controllers\HorasDisponiblesController::class,'ingresarHoras'])->name('asignar_horas.ingresarHoras');;

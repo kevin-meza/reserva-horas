@@ -82,20 +82,10 @@ class HorasDisponiblesController extends Controller
     ->whereDate('fecha',$fecha)->where('id_estado', 1)
        ->select('horas_disponibles.*', 'especialistas.nombre')
        ->get();
-        // print_r($listaHorasxDia);
+        // print_r($id_especialista);
 
   return view('horas_disponibles/horas_dia',$listaHorasxDia);
 
 
     }
-
-    public function asignarHoras(){
-        return view('asignar_horas/asignar_horas');
-    }
-
-    public function ingresarHoras(Request $request){
-       echo "hola";
-    }
-
-
 }
