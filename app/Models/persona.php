@@ -12,7 +12,7 @@ class persona extends Model
         'nombre',
         'apellido',
         'rut',
-        'edad',
+        // 'edad',
         'fecha_nacimiento'
     ];
 }
